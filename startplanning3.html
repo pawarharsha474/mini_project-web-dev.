@@ -1,0 +1,447 @@
+<html>
+<head>
+	<title>START PLANNING</title>
+	<script type="text/javascript">
+		function show1()
+		{
+			document.getElementById('sangeet1').style.display='block';
+		}
+		function show2()
+		{
+			document.getElementById('mehendi1').style.display='block';
+		}
+		function show3()
+		{
+			document.getElementById('haldi1').style.display='block';
+		}
+		function show4()
+		{
+			document.getElementById('shaadi1').style.display='block';
+		}
+		function show5()
+		{
+			document.getElementById('reception1').style.display='block';
+		}
+		function hide()
+		{
+			document.getElementById('sangeet1').style.display='none';
+			document.getElementById('mehendi1').style.display='none';
+			document.getElementById('haldi1').style.display='none';
+			document.getElementById('shaadi1').style.display='none';
+			document.getElementById('reception1').style.display='none';
+		}
+	</script>
+</head>
+<body  onload="hide()" bgcolor="PINK">
+<div style=" width:100% ;">
+	<div style=" margin-left:34% ; margin-right:35% ; height:300 ; width:40% ; margin-bottom:50 ;">
+		<a href="homepage.html"><img src="logo.png" height="300" width="400"></a><!--logo div-->
+	</div>
+</div>
+<pre>
+<font style=" font-weight:500 ; font-family:Zapfino ; font-size:10 ;">
+<form><b>
+<!--sangeet div-->
+<div onclick="show1()" style=" width:100% ; background-color:white ; margin-bottom:20 ;" name="sangeet" id="sangeet">
+ SANGEET
+	<div style=" width:100% ;" name="sangeet1" id="sangeet1">
+	NUMBER OF PEOPLE: <input type="number" name="nop" id="nop" step="10">*in multiples of 10
+	
+	VENUE           : <select>
+						<option>select venue</option>
+						<option value="v1">The Leela,Andheri</option>
+						<option value="v2">Four Seasons,Worli</option>
+						<option value="v3">De Grandeur Hotel,Thane</option>
+						<option value="v4">Vivette Banquet,Malad</option>
+						<option value="v5">Kohinoor Park,Dadar</option>
+					  </select>
+	
+	DECORATION      : <select>
+						<option>select decor</option>
+						<option value="d1">Classic Luxury</option>
+						<option value="d2">Peacock Wedding Theme</option>
+						<option value="d3">Rustic Chic</option>
+						<option value="d4">Bohemian</option>
+						<option value="d5">Pastel</option>
+					  </select>
+	
+	FOOD MENU       : 
+					STARTERS     : 
+	                		<input type="checkbox" name="starters" value="str1">Kakori Kebabs
+	                		<input type="checkbox" name="starters" value="str2">Microwave Paneer Tikkas
+	            			<input type="checkbox" name="starters" value="str3">Aloo and Dal ki Tikki
+				        <input type="checkbox" name="starters" value="str4">Mushroom Pesto Crostini
+						<input type="checkbox" name="starters" value="str5">Fig, Cream Cheese and Mint Tart
+							<input type="checkbox" name="starters" value="str6">Chicken Satay
+	                		<input type="checkbox" name="starters" value="str7">Bhuna Masala Chicken Wings
+	                		<input type="checkbox" name="starters" value="str8">Stir Fried Chilli Chicken
+	            			<input type="checkbox" name="starters" value="str9">Hot Basil Chicken Cups
+							<input type="checkbox" name="starters" value="str10">Crumb-Fried Chicken
+	            			
+	                		MAIN COURSE  : 
+	                        	<input type="checkbox" name="mainc" value="mnc1">Paneer Lababdaar
+	                        	<input type="checkbox" name="mainc" value="mnc2">Bhindi Masala
+	                        	<input type="checkbox" name="mainc" value="mnc3">Tawa Mushroom
+	                        	<input type="checkbox" name="mainc" value="mnc4">Malai Kofta
+								<input type="checkbox" name="mainc" value="mnc5">Subzi Da Kheema
+	                        	<input type="checkbox" name="mainc" value="mnc6">Nimbu Chicken Curry
+	                        	<input type="checkbox" name="mainc" value="mnc7">Tawa Prawns
+	                        	<input type="checkbox" name="mainc" value="mnc8">Peshwari Meat
+								<input type="checkbox" name="mainc" value="mnc9">Tawa Prawns
+	                        	<input type="checkbox" name="mainc" value="mnc10">Murgh Ambarsariya
+	                		BREADS/ROTIS : 
+	                        	<input type="checkbox" name="roti" value="roti1">Tandoori Roti
+	                        	<input type="checkbox" name="roti" value="roti2">Naan
+	                        	<input type="checkbox" name="roti" value="roti3">Garlic Naan
+	                    		<input type="checkbox" name="roti" value="roti4">Makai Di Roti
+								<input type="checkbox" name="roti" value="roti1">Baby Cheese Naan
+	                        	<input type="checkbox" name="roti" value="roti2">Rumali Roti
+	                		RICE/NOODLES : 
+	                        	<input type="checkbox" name="rice" value="rice1">Steamed Rice
+								<input type="checkbox" name="rice" value="rice2">Vegetable Fried Rice
+	                        	<input type="checkbox" name="rice" value="rice3">Roast Chicken Fried Rice
+								<input type="checkbox" name="rice" value="rice4">Mahlak Prawns Rice
+								<input type="checkbox" name="rice" value="rice5">Wok Tossed Hakka Noodles
+	                        	<input type="checkbox" name="rice" value="rice6">Cantonese Rice Noodles
+	                        	<input type="checkbox" name="rice" value="rice7">Chicken Garlic Noodles
+	                        	<input type="checkbox" name="rice" value="rice8">Pan Fried Prawns Noodles
+	                        DAALS : 
+	                        	<input type="checkbox" name="rice" value="rice1">Daal Makhani
+								<input type="checkbox" name="rice" value="rice2">Tadkeywali Daal
+	                        	<input type="checkbox" name="rice" value="rice3">Rajma Tariwale	
+	                        	
+	                  
+	                  
+	                		DESSERT      : 
+	                        	<input type="checkbox" name="dsrt" value="dsrt1">Gulab Jamun
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">Rasmalai
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">Jalebi Raabdi
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">Malai Coolfi
+								<input type="checkbox" name="dsrt" value="dsrt1">Tiramasu
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">Blurberry Cheesecake
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">Icecream Cake
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">Walnut Halwa
+								<input type="checkbox" name="dsrt" value="dsrt4">Chocolate Brownie
+								<input type="checkbox" name="dsrt" value="dsrt4">Panna Cotta
+							NON-ALCOHOLIC BEVERAGES      : 
+	                        	<input type="checkbox" name="dsrt" value="dsrt1">Pinacolada
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">Pineapple-Orange Sherbert Punch
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">Margarita Mocktail
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">Mint-Lime Iced Tea
+							ALCOHOLIC BEVERAGES      : 
+	                        	<input type="checkbox" name="dsrt" value="dsrt1">Champagne
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">Red Wine
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">White Wine
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">Scotch
+								<input type="checkbox" name="dsrt" value="dsrt4">Bourbon
+							
+	
+	ENTERTAINMENT   : 
+					MUSIC : 
+	                        	<input type="radio" name="music" id="music" value="band">BAND
+	                        	<input type="radio" name="music" id="music" value="dj">DJ
+	                  
+	                  		DANCE : 
+	                          	<input type="checkbox" name="dance" value="choreographer">CHOREOGRAPHER
+	                          	<input type="checkbox" name="dance" value="performers">PERFORMERS
+	
+	SERVICES        : 
+	                  		<input type="checkbox" name="services" value="ser1">Photographer
+	                  		<input type="checkbox" name="services" value="ser2">Videographer
+							<input type="checkbox" name="services" value="ser2">Stylist and Hair-dresser
+						
+	</div>
+</div>
+<!--mehendi div-->
+<div onclick="show2()" style=" width:100% ; background-color:white ; margin-bottom:20 ;" name="mehendi" id="mehendi">
+ MEHENDI
+	<div style=" width:100% ;" name="mehendi1" id="mehendi1">
+	NUMBER OF PEOPLE: <input type="number" name="nop" id="nop" step="10">*in multiples of 10
+	
+	VENUE           : <select>
+						<option>select venue</option>
+						<option value="v1">venue1</option>
+						<option value="v2">venue2</option>
+						<option value="v3">venue3</option>
+						<option value="v4">venue4</option>
+						<option value="v5">venue5</option>
+					  </select>
+	
+	DECORATION      : <select>
+						<option>select decor</option>
+						<option value="d1">decor1</option>
+						<option value="d2">decor2</option>
+						<option value="d3">decor3</option>
+						<option value="d4">decor4</option>
+						<option value="d5">decor5</option>
+					  </select>
+	
+	FOOD MENU       : 
+					STARTERS     : 
+	                		<input type="checkbox" name="starters" value="str1">1
+	                		<input type="checkbox" name="starters" value="str2">2
+	                		<input type="checkbox" name="starters" value="str3">3
+	            			<input type="checkbox" name="starters" value="str4">4
+	                  
+	                		MAIN COURSE  : 
+	                        	<input type="checkbox" name="mainc" value="mnc1">1
+	                        	<input type="checkbox" name="mainc" value="mnc2">2
+	                        	<input type="checkbox" name="mainc" value="mnc3">3
+	                        	<input type="checkbox" name="mainc" value="mnc4">4
+	                  
+	                		BREADS/ROTIS : 
+	                        	<input type="checkbox" name="roti" value="roti1">1
+	                        	<input type="checkbox" name="roti" value="roti2">2
+	                        	<input type="checkbox" name="roti" value="roti3">3
+	                    		<input type="checkbox" name="roti" value="roti4">4
+	                  
+	                		RICE/NOODLES : 
+	                        	<input type="checkbox" name="rice" value="rice1">1
+	                        	<input type="checkbox" name="rice" value="rice2">2
+	                        	<input type="checkbox" name="rice" value="rice3">3
+	                        	<input type="checkbox" name="rice" value="rice4">4
+	                  
+	                		DESSERT      : 
+	                        	<input type="checkbox" name="dsrt" value="dsrt1">1
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">2
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">3
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">4
+							
+	
+	ENTERTAINMENT   : 
+					MUSIC : 
+	                        	<input type="radio" name="music" id="music" value="band">BAND
+	                        	<input type="radio" name="music" id="music" value="dj">DJ
+	                  
+	                  		DANCE : 
+	                          	<input type="checkbox" name="dance" value="choreographer">CHOREOGRAPHER
+	                          	<input type="checkbox" name="dance" value="performers">PERFORMERS
+	
+	SERVICES        :
+	                  		<input type="checkbox" name="services" value="ser1">Mehendi Artist
+	                  		
+	</div>
+</div>
+<!--haldi div-->
+<div onclick="show3()" style=" width:100% ; background-color:white ; margin-bottom:20 ;" name="haldi" id="haldi">
+ HALDI
+	<div style=" width:100% ;" name="haldi1" id="haldi1">
+	NUMBER OF PEOPLE: <input type="number" name="nop" id="nop" step="10">*in multiples of 10
+	
+	VENUE           : <select>
+						<option>select venue</option>
+						<option value="v1">venue1</option>
+						<option value="v2">venue2</option>
+						<option value="v3">venue3</option>
+						<option value="v4">venue4</option>
+						<option value="v5">venue5</option>
+					  </select>
+	
+	DECORATION      : <select>
+						<option>select decor</option>
+						<option value="d1">decor1</option>
+						<option value="d2">decor2</option>
+						<option value="d3">decor3</option>
+						<option value="d4">decor4</option>
+						<option value="d5">decor5</option>
+					  </select>
+	
+	FOOD MENU       : 
+					STARTERS     : 
+	                		<input type="checkbox" name="starters" value="str1">1
+	                		<input type="checkbox" name="starters" value="str2">2
+	                		<input type="checkbox" name="starters" value="str3">3
+	            			<input type="checkbox" name="starters" value="str4">4
+	                  
+	                		MAIN COURSE  : 
+	                        	<input type="checkbox" name="mainc" value="mnc1">1
+	                        	<input type="checkbox" name="mainc" value="mnc2">2
+	                        	<input type="checkbox" name="mainc" value="mnc3">3
+	                        	<input type="checkbox" name="mainc" value="mnc4">4
+	                  
+	                		BREADS/ROTIS : 
+	                        	<input type="checkbox" name="roti" value="roti1">1
+	                        	<input type="checkbox" name="roti" value="roti2">2
+	                        	<input type="checkbox" name="roti" value="roti3">3
+	                    		<input type="checkbox" name="roti" value="roti4">4
+	                  
+	                		RICE/NOODLES : 
+	                        	<input type="checkbox" name="rice" value="rice1">1
+	                        	<input type="checkbox" name="rice" value="rice2">2
+	                        	<input type="checkbox" name="rice" value="rice3">3
+	                        	<input type="checkbox" name="rice" value="rice4">4
+	                  
+	                		DESSERT      : 
+	                        	<input type="checkbox" name="dsrt" value="dsrt1">1
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">2
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">3
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">4
+	
+	ENTERTAINMENT   : 
+					MUSIC : 
+	                        	<input type="radio" name="music" id="music" value="band">BAND
+	                        	<input type="radio" name="music" id="music" value="dj">DJ
+	                  
+	                  		DANCE : 
+	                          	<input type="checkbox" name="dance" value="choreographer">CHOREOGRAPHER
+	                          	<input type="checkbox" name="dance" value="performers">PERFORMERS
+	
+	SERVICES        :
+	                  		<input type="checkbox" name="services" value="ser1">Haldi Services
+							<input type="checkbox" name="services" value="ser1">Pandit
+	                  		
+	</div>
+</div>
+<!--shaadi div-->
+<div onclick="show4()" style=" width:100% ; background-color:white ; margin-bottom:20 ;" name="shaadi" id="shaadi">
+ SHAADI
+	<div style=" width:100% ;" name="shaadi1" id="shaadi1">
+	NUMBER OF PEOPLE: <input type="number" name="nop" id="nop" step="10">*in multiples of 10
+	
+	VENUE           : <select>
+						<option>select venue</option>
+						<option value="v1">venue1</option>
+						<option value="v2">venue2</option>
+						<option value="v3">venue3</option>
+						<option value="v4">venue4</option>
+						<option value="v5">venue5</option>
+					  </select>
+	
+	DECORATION      : <select>
+						<option>select decor</option>
+						<option value="d1">decor1</option>
+						<option value="d2">decor2</option>
+						<option value="d3">decor3</option>
+						<option value="d4">decor4</option>
+						<option value="d5">decor5</option>
+					  </select>
+	
+	MANDAP          : <select>
+						<option>select mandap</option>
+						<option value="m1">mandap1</option>
+						<option value="m2">mandap2</option>
+						<option value="m3">mandap3</option>
+						<option value="m4">mandap4</option>
+						<option value="m5">mandap5</option>
+					  </select>
+	
+	FOOD MENU       : 
+					STARTERS     : 
+	                		<input type="checkbox" name="starters" value="str1">1
+	                		<input type="checkbox" name="starters" value="str2">2
+	                		<input type="checkbox" name="starters" value="str3">3
+	            			<input type="checkbox" name="starters" value="str4">4
+	                  
+	                		MAIN COURSE  : 
+	                        	<input type="checkbox" name="mainc" value="mnc1">1
+	                        	<input type="checkbox" name="mainc" value="mnc2">2
+	                        	<input type="checkbox" name="mainc" value="mnc3">3
+	                        	<input type="checkbox" name="mainc" value="mnc4">4
+	                  
+	                		BREADS/ROTIS : 
+	                        	<input type="checkbox" name="roti" value="roti1">1
+	                        	<input type="checkbox" name="roti" value="roti2">2
+	                        	<input type="checkbox" name="roti" value="roti3">3
+	                    		<input type="checkbox" name="roti" value="roti4">4
+	                  
+	                		RICE/NOODLES : 
+	                        	<input type="checkbox" name="rice" value="rice1">1
+	                        	<input type="checkbox" name="rice" value="rice2">2
+	                        	<input type="checkbox" name="rice" value="rice3">3
+	                        	<input type="checkbox" name="rice" value="rice4">4
+	                  
+	                		DESSERT      : 
+	                        	<input type="checkbox" name="dsrt" value="dsrt1">1
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">2
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">3
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">4
+	
+	ENTERTAINMENT   : 
+					MUSIC : 
+	                        	<input type="radio" name="music" id="music" value="band">BAND
+	                        	<input type="radio" name="music" id="music" value="dj">DJ
+	                  
+	                  		DANCE : 
+	                          	<input type="checkbox" name="dance" value="choreographer">CHOREOGRAPHER
+	                          	<input type="checkbox" name="dance" value="performers">PERFORMERS
+	
+	SERVICES        :
+	                  		<input type="checkbox" name="services" value="ser1">Pandit
+							<input type="checkbox" name="services" value="ser1">Bridal Make-up Service
+	                  		
+	</div>
+</div>
+<!--reception div-->
+<div onclick="show5()" style=" width:100% ; background-color:white ; margin-bottom:20 ;" name="reception" id="reception">
+ RECEPTION
+	<div style=" width:100% ;" name="reception1" id="reception1">
+	NUMBER OF PEOPLE: <input type="number" name="nop" id="nop" step="10">*in multiples of 10
+	
+	VENUE           : <select>
+						<option>select venue</option>
+						<option value="v1">venue1</option>
+						<option value="v2">venue2</option>
+						<option value="v3">venue3</option>
+						<option value="v4">venue4</option>
+						<option value="v5">venue5</option>
+					  </select>
+	
+	DECORATION      : <select>
+						<option>select decor</option>
+						<option value="d1">decor1</option>
+						<option value="d2">decor2</option>
+						<option value="d3">decor3</option>
+						<option value="d4">decor4</option>
+						<option value="d5">decor5</option>
+					  </select>
+	
+	FOOD MENU       : 
+					STARTERS     : 
+	                		<input type="checkbox" name="starters" value="str1">1
+	                		<input type="checkbox" name="starters" value="str2">2
+	                		<input type="checkbox" name="starters" value="str3">3
+	            			<input type="checkbox" name="starters" value="str4">4
+	                  
+	                		MAIN COURSE  : 
+	                        	<input type="checkbox" name="mainc" value="mnc1">1
+	                        	<input type="checkbox" name="mainc" value="mnc2">2
+	                        	<input type="checkbox" name="mainc" value="mnc3">3
+	                        	<input type="checkbox" name="mainc" value="mnc4">4
+	                  
+	                		BREADS/ROTIS : 
+	                        	<input type="checkbox" name="roti" value="roti1">1
+	                        	<input type="checkbox" name="roti" value="roti2">2
+	                        	<input type="checkbox" name="roti" value="roti3">3
+	                    		<input type="checkbox" name="roti" value="roti4">4
+	                  
+	                		RICE/NOODLES : 
+	                        	<input type="checkbox" name="rice" value="rice1">1
+	                        	<input type="checkbox" name="rice" value="rice2">2
+	                        	<input type="checkbox" name="rice" value="rice3">3
+	                        	<input type="checkbox" name="rice" value="rice4">4
+	                  
+	                		DESSERT      : 
+	                        	<input type="checkbox" name="dsrt" value="dsrt1">1
+	                        	<input type="checkbox" name="dsrt" value="dsrt2">2
+	                        	<input type="checkbox" name="dsrt" value="dsrt3">3
+	                        	<input type="checkbox" name="dsrt" value="dsrt4">4
+	
+	ENTERTAINMENT   : 
+					MUSIC : 
+	                        	<input type="radio" name="music" id="music" value="band">BAND
+	                        	<input type="radio" name="music" id="music" value="dj">DJ
+	                  
+	                  		DANCE : 
+	                          	<input type="checkbox" name="dance" value="choreographer">CHOREOGRAPHER
+	                          	<input type="checkbox" name="dance" value="performers">PERFORMERS
+	
+	SERVICES        :
+	                  		<input type="checkbox" name="services" value="ser1">Bridal Make-up Service
+	                  		
+	</div>
+</div>
+</b></form>
+</font>
+</pre>
+</body>
+</html>

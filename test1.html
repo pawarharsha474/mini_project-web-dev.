@@ -1,0 +1,60 @@
+<html>
+<head>
+<script type ="text/javascript">
+var cost=0;
+function add(val)
+{
+  	var http = new XMLHttpRequest();
+  	http.abort(); // to remove any old AJAX object
+  
+  	http.open("GET","test.php?srtr=" + val, true);
+  	http.send();
+  
+  	http.onreadystatechange= function()
+	{
+		if(http.readyState == 4)
+		{
+			cost = cost + parseInt(http.responseText);
+			document.getElementById("alert").innerHTML = cost;
+		}
+  	}
+
+}
+function sub(val)
+{
+	var http = new XMLHttpRequest();
+  	http.abort(); // to remove any old AJAX object
+  
+  	http.open("GET","test.php?srtr=" + val, true);
+  	http.send();
+  
+  	http.onreadystatechange= function()
+	{
+		if(http.readyState == 4)
+		{
+			cost = cost - parseInt(http.responseText);
+			document.getElementById("alert").innerHTML = cost;
+		}
+  	}
+
+}
+</script>
+</head>
+
+<body>
+  <div id="test"><h4>Hello World!</h4></div><br/><pre>
+ FOOD MENU       : STARTERS     : 	 <input type="checkbox" id="srtr" name="starters[]" value="s101" onchange="if(this.checked){add(this.value);}else{sub(this.value);}">1
+	                                 <input type="checkbox" id="srtr" name="starters[]" value="s103" onchange="if(this.checked){add(this.value);}else{sub(this.value);}">3
+ENTERTAINMENT    : MUSIC        :	 <input type="radio" name="music" id="music" value="m101" onchange="if(this.checked){add(this.value);}else{sub(this.value);}">Band
+					 <input type="radio" name="music" id="music" value="m102" onchange="if(this.checked){add(this.value);}else{sub(this.value);}">DJ
+VENUE           : <select>
+						<option>Select Venue</option>
+						<option value="v101" onchange="add(this.value)">The Leela,Andheri</option>
+						<option value="v102" onchange="if(this.checked){add(this.value);}else{sub(this.value);}">Four Seasons,Worli</option>
+				  </select>
+ </pre>
+  <font size="20" color="red"><span id="alert"></span></font>
+  <br>
+  
+</body> 
+</html>

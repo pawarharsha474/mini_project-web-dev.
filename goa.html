@@ -1,0 +1,319 @@
+<html>
+<head>
+	<title>Goa</title>
+	<script type="text/javascript">
+		
+		function checknop(val)
+		{
+			if(val=='')
+			{
+				alert('Please enter Number of People');
+			}
+			if(val<1)
+			{
+				document.getElementById("jainop").innerHTML = "";
+				alert('Please enter Appropriate Number of People');
+			}
+			
+		}
+		function checkuser(userid)
+		{
+			var http = new XMLHttpRequest();
+			http.abort();
+  
+			http.open("GET","checkuser.php?userid=" + userid, true);
+			http.send();
+  
+			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					document.getElementById("checkuser").innerHTML = http.responseText;
+					
+					if(http.responseText!='')
+					{
+						document.getElementById("userid").value = '';
+					}
+					
+				}
+			}
+	
+		}
+		function checkpass(pass)
+		{
+			if(pass.length<5)
+			{
+				document.getElementById("checkpass").innerHTML = "<br>Password is too short.";
+			}
+			if(pass.length>4)
+			{
+				document.getElementById("checkpass").innerHTML = "";
+			}
+		}
+	</script>
+</head>
+<body style=" width:98.7% ; background-color:rgb(102,255,255) ;">
+<font style=" font-weight:500 ; font-family:Zapfino ; font-size:10 ;">
+	<div style=" padding-top:20 ; height:700 ; width:100% ; background-image:url(26.jpg) ; background-size:100% 100% ; background-repeat:no-repeat ; background-position: center center ;">
+	<div style=" margin-top:20 ; height:300 ; width:100% ; background-color:rgba(255,255,255,0.5) ;">
+	<a href="homepage.html"><img style=" margin-left:36% ; margin-right:35% ;" src="logo.png" height="300" width="400"></a><!--logo div-->
+	</div>
+	<div style=" padding-bottom:10 ; margin-bottom:30 ; height:100 ; text-align:center ; background-color:rgba(255,255,255,0.5) ; margin-top:200 ;">
+	<font color='rgb(0, 179, 179)' style=" font-weight:500 ; font-family:Zapfino ; font-size:40 ;"><b>
+	GOA
+	</b></font>
+	</div>
+	</div>
+	<div style=" padding-left:20 ; padding-right:20 ;">
+	<div>
+	<!--intro-->
+	<div style=" padding-bottom:10 ; padding-top:10 ; width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:50 ; margin-top:80 ; text-align:center ;">
+	<font style=" font-weight:500 ; font-family:Zapfino ; font-size:18 ;">
+	<b>Goa</b> has, over the past decade, emerged as a hotbed for destination weddings in India. 
+	This comes as no surprise, given the stellar locations one gets to choose from at this balmy beach destination. 
+	Warm, tropical and hence inviting to many a couple, Goa fits the bill for the destination wedding neatly, with facilities made available across a number of different locations. 
+	We&#39;re here to give you the low down on reasons why Goa shines as a wedding destination.
+	<br><br><b>Peaceful and romantic</b>
+	<br>Goa is a place that has lush of greenery, scenic beauty and most importantly the beaches. 
+	All these factors are indeed necessary for a picture perfect wedding. 
+	Getting married in Goa contributes to the romantic relationship of the couple and the Goan culture adds to the celebration. 
+	Who doesn&#39;t want to exchange wedding vows amidst the greenery, in the sea shore, open skies and cool breeze? The feeling is really amazing.
+	<br><b>Doubles as a Holiday for Your Guests</b>
+	<br>Have friends who like to party? Then Goa would be a haven for your wedding guests, no doubt! Give people one more reason to attend, by hosting your wedding at a popular holiday location such as Goa. 
+	Young children — and we bet your friends have some &#45; too will love this seaside option &#45; the land of the sun, sand and sea!
+	<br><b>Save on Decor!</b>
+	<br>Now down to the practicalities &#45; the cost. 
+	Cut down cost by choosing a destination wedding? Counter-intuitive, perhaps but every bit true. 
+	With a location as picturesque as Goa &#45; with its lilting waters and waving palm fronds &#45; needs very little to spruce it up. 
+	In fact, a wedding here with just minimal decorations would mean you are doing the best to highlight the destination itself. 
+	With minimal decorations of course comes minimal cost &#45; splurge your savings or save them, as your heart desires!
+	</font>
+	</div>
+	<!--marquee-->
+	<div style=" padding-top:15 ; width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:50 ; text-align:center ;">
+	<marquee  scrolldelay=1 behaviour="infinite" direction="left">
+		<img src="goa1.jpg" width="600" height="400"></img>
+		<img src="goa2.jpg" width="600" height="400"></img>
+		<img src="goa3.jpg" width="600" height="400"></img>
+		<img src="goa4.jpeg" width="600" height="400"></img>
+		<img src="goa5.jpg" width="600" height="400"></img>
+		<img src="goa6.jpg" width="600" height="400"></img>
+		<img src="goa7.jpg" width="600" height="400"></img>
+		<img src="goa8.jpeg" width="600" height="400"></img>
+		<img src="goa9.jpg" width="600" height="400"></img>
+		<img src="goa10.jpg" width="600" height="400"></img>
+		<img src="goa11.jpg" width="600" height="400"></img>
+	</marquee>
+	</div>
+	<!--itenary-->
+	<div style=" width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:50 ; text-align:center ;">
+	<font style=" font-weight:500 ; font-family:Zapfino ; font-size:18 ;">
+	<b><u>VENUE:</u><br> Taj Exotica Resort &amp; Spa</b>, Goa built on the crescent of the beach at Benaulim, in Goa, India.
+	The hotel has 136 Rooms, each can be occupied by 2 adults and one child &amp; 
+	4 Suites,each can be occupied by 4 adults and 2 children will be booked for your guests for 4 1/2 days and 4 nights.
+	<br>Guests will be provided with a lavish buffet ,with a choice of Vegetarian and Non Vegetarian menu for breakfast, lunch and
+	dinner, on each of the five days. Timings for the same will be display for the guests on the Banner for Event Program @ Hotel Lobby.
+	<br><br><br><b><i>ITENARY</i></b>
+	<br><br><b>Day 1 : <i>Arrival</i></b>
+	<br>We welcome Guests at Airport/ Railway Station in a traditional way by Garlanding, Aarti and Tikka and transfer to the Hotel. 
+	Refreshing Non-alcoholic Drink is served on arrival and our Help Desk assist them to their respective Rooms. 
+	Afternoon is free for the arranged recreational activities or just relaxing in your beautiful Hotel.
+	<br><u><b>NO VENUE FOR ANY FUNCTION WILL BE BOOKED ON THIS DAY</b></u>
+	
+	<br><hr><b>Day 2: <i>Sangeet and Mehendi</i></b>
+	<br>The Sangeet ceremony will be conducted in late afternoon followed by the mehendi function. 
+	The venue for the same will be booked from 12 noon to 2 am.
+	<br><u><b>Sangeet Setup Cost Includes:</b></u>
+	<br>1. Event Directional Stand
+	<br>2. Stage with Backdrop
+	<br>3. Entry Gate
+	<br>4. Left side-Centre Bride Groom Stage
+	<br>5. Stall Decor
+	<br>6. Dance Floor in Centre 16x16 or 20x20
+	<br>7. Sound &amp; Light Decor
+	<br>8. Round Table &amp; Chairs
+	<br>9. VIP Couches
+	<br>10. Emcee
+	<br>11. Choreographer
+	<br>12. Dance Troupe
+	<br>13. Special Effects
+	<br>14. Floral Decor &amp; Props
+	<br><u><b>Mehndi Setup Cost Includes:</b></u>
+	<br>1. Event Directional Stand
+	<br>2. Rangoli &amp; Matka Props of Floral Decor
+	<br>3. Canopy in Yellow, Green &amp; Orange Colour
+	<br>4. Diwan, Mudhas &amp; Low Heighted Seat with Chowki
+	<br>5. Some Mudhas at Outside Canopy with Sarkanda Table
+	<br>6. 4 Game Stall, Stall Made by Fabric &amp; Table
+	<br>7. Hanging Decoration at Restaurant Area
+	<br>8. 2 Top Sound with Mike &amp; Music
+	<br>9. Female Emcee
+	<br>10. Folk Dance Troupe 3+2
+	<br>11. Stage for Bride &amp; Groom With Comfortable Seating With Back &amp; Centre Truss to be Decorated
+	<br>12. Floral Decor &amp; Props
+	<br>13. Mehndi Artist For all guests and
+	
+	<br><hr><b>Day 3: <i>Haldi</i></b>
+	<br>The guests will be provided from recreational activities from morning till late afternoon, followed by the haldi ceremony. 
+	For haldi the venue will be booked from 3 pm to 9 pm. 
+	Shaadi rituals will begin early the next morning.
+	
+	<br><hr><b>Day 4: <i>Shaadi and Reception</i></b>
+	<br><b><u>5:00 am</u></b><br><u>Bridal Party Hair and Makeup Begins | 2-3 Hours</u> 
+	<br>Hair & Makeup is frequently the most underestimated part of the day when it comes to carving out the right amount of time. 
+	This process can take anywhere from 1.5 to 3 hours depending on the style, so be sure to allow enough time after you have had your consultation with your hair stylist and makeup artist.
+	<br><b><u>7:00 am</u></b><br><u>Photographer Arrives, Takes Photos of Details | 45 Minutes</u>
+	<br>You should have all of your details ready for the photographers, all in one place. 
+	For the bride, this would be things like her Sari or Lengha, all wedding rings, shoes, jewelry, etc. 
+	For the groom, details would include his shoes, outfit, watch, and any other accessories.
+	<br><b><u>7:45 am</u></b><br>All Hair and Makeup Complete
+	<br><b><u>7:45 am</u></b><br><u>Prep Portraits | 30 Minutes</u>
+	<br>This is when your photographer will take photos of the finishing touches of hair and makeup, candids of bridesmaids, groomsmen and relatives as the Bride and Groom prepare for their big day. 
+	This is the perfect time to exchange gifts, if applicable to your timeline because everyone is fully dressed and dolled up for the day.
+	<br><b><u>8:15 am</u></b><br><u>Individual Portraits | 45 Minutes</u>
+	<br>We like to snag some portraits of both the Bride & Groom just before they head out to their first look location spot. 
+	This small window of time is the perfect moment in a hectic day to grab portraits like these before the hubbub of the wedding begins.
+	<br><b><u>8:30 am</u></b><br>Leave room for photo shoot
+	<br><b><u>8:50 am</u></b><br><u>First look / Couple&#39;s Daytime Session | 30 Minutes</u> (At Least)
+	<br>This is when you have the opportunity to experience a special moment with your soon-to-be-spouse. 
+	The first look is a sweet and intimate time that your photographer will capture for you to remember the moment forever. 
+	<br><b><u>9:20 am</u></b><br><u>Bridal Party Portraits | 50 Minutes</u> (At Least)
+	<br>This time allotment is for 6 bridesmaids and 6 groomsmen. For larger bridal parties, more time should be allotted for this photo session as rounding up more people takes more time. 
+	For suggestions on how to calculate this, check out our Wedding Photography Timeline.
+	<br><b><u>9:30 am</u></b><br>Ceremony Site Should Be Completely Set Up
+	<br><b><u>9:40 am</u></b><br><u>Photographs of Ceremony Details | 30 Minutes</u>
+	<br>During the time that your bridal party portraits are being taken and after the ceremony is completely set up, the 2nd photographer will take photos of the ceremony site and the details of the ceremony.
+	<br><b><u>10:10 am</u></b><br><u>Bride Hides Away for Baraat</u>
+	<br>At this time the bride will return to her room, or will hide away while the groom has his Baraat. 
+	More individual portraits of the bride may be taken at this time.
+	<br><b><u>10:15 am</u></b><br><u><b>Baraat </b>&#45; Groom Gets On Horse, Procession Begins | 30 Minutes</u>
+	<br>This is a celebratory time in the Indian Wedding Timeline for the groom&#39;s guests as they dance their way along the processional to the ceremony site. 
+	Photographers will follow along to capture the vibrant celebration as the groom rides in on his decorated white horse.
+	<br><b><u>10:45 am</u></b><br>Baraat Arrival At Ceremony Entrance
+	<br><b><u>10:45 am</u></b><br><u>Milni | 20 Minutes</u>
+	<br>At the end of the Baraat, the groom greets the bride&#39;s family for the milni ceremony. 
+	Read more about the ritual and its significance in the Indian Wedding Timeline in Milni Ceremony article. 
+	Before the groom can make his way to the Mandap he must remove his shoes. 
+	Joota Chupai commences and the bride&#39;s family begin to try to steal and hide the groom&#39;s shoes in a mischievous and jovial act of Indian tradition.
+	<br><b><u>11:10 am</u></b><br><u>Groom walks into Mandap</u>
+	<br>At this point in the timeline the priest prays to Lord Ganesh to bless the occasion and make the ceremony free of obstacles. 
+	You can read more about the tradition of Ganesha Puja here. 
+	Read more here about the Mandap and its symbolic significance.
+	<br><b><u>11:20 am</u></b><br><u>Bridal Grand Entrance</u>
+	<br>The bride enters the ceremony site and is brought to the Mandap by her maternal uncle, or other relatives and bridesmaids. 
+	This is known as the Kanya Aagaman which literally translates to &quot;The Arrival of the Bride.&quot;
+	<br><b><u>11:30 am</u></b><br><u>Ceremony Begins | 1 Hour</u>
+	<br>The Indian Wedding Ceremony consists of many different rituals below is a list of many of them. 
+    <br>Varmala
+    <br>Kanyadaan
+    <br>Vivaah Homa
+    <br>Hastmelap
+    <br>Mangalsutra
+    <br>Granthi Bandhanam
+    <br>Saptapadi or Mangal Fera
+    <br>Kalasha
+    <br>Laaja Homam
+    <br>Kansar Bhakshan
+    <br>Ashirwad
+	<br><b><u>12:45 pm</u></b><br>Ceremony Ends
+	<br><b><u>12:45 pm</u></b><br>Vidaai | 5-10 Minutes</u>
+	<br>This is when the bride&#39;s family bids her farewell as she rides away with her new husband. 
+	This can also be known as the Bidaai .
+	<br><b><u>1:00 pm</u></b><br><u>Lunch | 1 Hour</u>
+	<br><b><u>12:50 pm</u></b><br><u>Family Formals at Mandap | 45 Minutes</u> (At Least)
+	<br>At this point in the Indian Wedding Timeline, your guests are eating lunch and it is time to take Formal Family photos with all of your extended family. 
+	Be sure to have a list for your photographer of exactly who you want to include in these portraits and look at the Ideal Wedding Photography Timeline for suggestions on how much time to leave depending on the size of your family.
+	<br><b><u>1:30 pm</u></b><br><u>Couple&#39;s Session | 45 Minutes</u>
+	<br>This is another opportunity for your photographer to get some more shots as a couple, except now you are a married couple! 
+	45 minutes is the suggested time for this, but more time can always be allocated to allow for more time and more extravagant photos, or different locations.
+	<br><b><u>2:15 pm</u></b><br>Bride and Groom Downtime
+	<br><b><u>2:45 pm</u></b><br><u>Re-Do Hair/Touch-Up Makeup for Reception | 1 Hour and 15 Minutes</u>
+	<br>During this time your photographer will take detail and prep shots of your reception outfit changes, so again it is important to have all these details in one place.
+	<br><b><u>4:00 pm</u></b><br><u>Get Dressed for Reception | 15 Minutes</u>
+	<br><b><u>4:15 pm</u></b><br><u>Family Portraits | 45 Minutes</u>
+	<br>This is another opportunity to get photos with your family in their formal wear for the reception. 
+	It&#39;s important to allow enough time for all the portraits you would like so that it does not cut into your nighttime couple&#39;s session.
+	<br><b><u>5:00 pm</u></b><br><u>Photographs of Cocktail Details and Guests Mingling | 45 Minutes</u>
+	<br><b><u>5:30 pm</u></b><br><u>Cocktail Hour | 1 Hour</u>
+	<br>During this time, your guests arrive at the reception and begin mingling with each other and your families. 
+	Typically the bride and groom do not attend this cocktail hour because they are away taking more photos in their reception attire.
+	<br><b><u>5:00 pm</u></b><br><u>Nighttime/Reception Couple&#39;s Session | 1 Hour</u> (At Least)
+	<br>This is when we get some of the sunset/nighttime shots that are Lin and Jirsa&#39;s signature look. 
+	Be sure to allow enough time for this photo session to travel around your reception site&#39;s premises. 
+	We also like to get photos of just the bride and groom in the reception hall before guests enter. 
+	Be sure to let your photographer know if you want to attend part of your cocktail hour to mingle with guests so that your Indian Wedding Timeline can accommodate this.
+	<br><b><u>5:45 pm</u></b><br><u>Photographs of Reception Details | 45 Minutes</u>
+	<br><b><u>6:45pm</u></b><br><u>Doors Open to Reception</u>
+	<br>Guests begin to fill the reception hall and take their seats to prepare for the entrances of the family, bridal party and finally the Grand Entrance of the newlyweds. 
+	For more information on planning a good Wedding Reception Timeline check out this link.
+	<br><b><u>7:00 pm</u></b><br><b>Grand Entrance</b>
+	<br><b><u>7:00-9:30</u></b><br><u>Dinner, Programming, Performances, Speeches</u>
+	<br>This time in the reception is allotted for whatever programming you have planned. 
+	Often times in Indian Wedding Timelines there are multiple dancing performances by professional dancers, performers, and family. 
+	This is a good time for speeches from family and the Maid of Honor and Best Man. 
+	Usually, the first dance and family dances occur during this time as well, before the dance floor is opened to all the guests.
+	<br><b><u>9:30</u></b><br><u>Open Dance floor</u>
+	<br>It&#39;s time for everyone to party! This is a good time for the first power dance set. 
+	At this point, your guests are ready to stretch their legs and get their blood pumping.
+	<br><b><u>10:00 pm</u></b><br><u>Sneak Away Session | 20 Minutes</u>
+	<br>This is the last couples session to photograph. 
+	It will have been completely dark now and it is time for us to capture the closing moments of your wedding day. 
+	It&#39;s good to find locations with interesting light and landscapes. 
+	Things like mirrored rooms, city scapes, fountains and bodies of water reflect light well and can cause some really incredible nighttime shots before you and your new spouse go on to your happily ever after.
+	<br><b><u>10:30 pm</u></b><br><u>Cake Cutting Ceremony/Dessert</u>
+	<br>This signifies to your guests that the reception will be ending soon. 
+	Some weddings choose to also include late night food options for their guests at this time to keep the party going even later into the night!
+	<br><b><u>10:45</u></b><br><u>Dancing continues</u>
+	<br>Dancing can continue for another hour or more at this point, it&#39;s up to you how late you have contracted your vendors for and how late you would like to stay up partying and celebrating your marriage!
+	<br><u><b>Wedding Setup Cost Includes:</b></u>
+	<br>Event Directional Stand
+	<br>Stage with Backdrop
+	<br>Entry Gate
+	<br>Dance Floor in Centre 16x16 or 20x20
+	<br>Sound & Light Decor
+	<br>Seating Arrangement
+	<br>VIP Couches
+	<br>Emcee
+	<br>Live Band
+	<br>Special Effects
+	<br>Floral Decor & Props
+	<br>Varmala Concept
+ 
+	<br><hr><b>Day 5: <i>Check out after breakfast</i></b>
+	<br> <br>
+	</font>
+	</div>
+	<!--marquee-->
+	<div style=" padding-top:15 ; width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:50 ; text-align:center ;">
+	<marquee  scrolldelay=1 behaviour="infinite" direction="left">
+		<img src="b1.jpg" width="600" height="400"></img>
+		<img src="b2.jpg" width="600" height="400"></img>
+		<img src="b3.jpg" width="600" height="400"></img>
+		<img src="b4.jpg" width="600" height="400"></img>
+		<img src="b5.jpg" width="600" height="400"></img>
+		<img src="b6.jpg" width="600" height="400"></img>
+		<img src="b7.jpg" width="600" height="400"></img>
+		<img src="b8.jpg" width="600" height="400"></img>
+		<img src="b9.jpg" width="600" height="400"></img>
+		<img src="b10.jpg" width="600" height="400"></img>
+	</marquee>
+	</div>
+	<!--form-->
+	<div style=" padding-top:35 ; padding-bottom:35 ; font-size:15 ; text-align:center ; width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:50 ;">
+	<form action="confirmdes.php" method="post">
+	<b>NUMBER OF PEOPLE : </b><input type="number" name="jainop" id="nop" step="10" onblur="checknop(this.val)" required>*in multiples of 10
+	<br><br>
+	Enter FullName : <input type='text' placeholder='Enter Your Name' name='username' id='username' required>
+	<br>
+	Enter UserName : <input type='text' placeholder='Enter UserName' name='userid' id='userid' onblur="checkuser(this.value)" required>
+	<span id="checkuser" style=" font-size:15 ;"></span>
+	<br>
+	Enter Password : <input type='password' placeholder='Enter Password' name='password' id='password' onkeyup="checkpass(this.value)" required>
+	<span id="checkpass" style=" font-size:15 ;"></span>
+	<br><br><input type="submit" value= "Confirm Package" name="goaplan" id="goaplan" style=' font-family:Zapfino ; color:black ; border:1 solid black ; background-color:rgb(242, 242, 242) ; height:70 ; width:300 ; font-size:20 ;'>
+	</form>
+	</div>
+	</div>
+</font>
+</body>
+</html>

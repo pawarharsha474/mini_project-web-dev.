@@ -1,0 +1,997 @@
+<html>
+<head>
+	<title>START PLANNING</title>
+	<script type="text/javascript">
+		var cost=0;
+		var nop;
+		function show1()
+		{
+			document.getElementById('sangeet1').style.display='block';
+		}
+		function show2()
+		{
+			document.getElementById('mehendi1').style.display='block';
+		}
+		function show3()
+		{
+			document.getElementById('haldi1').style.display='block';
+		}
+		function show4()
+		{
+			document.getElementById('shaadi1').style.display='block';
+		}
+		function show5()
+		{
+			document.getElementById('reception1').style.display='block';
+		}
+		function hide()
+		{
+			document.getElementById('sangeet1').style.display='none';
+			document.getElementById('mehendi1').style.display='none';
+			document.getElementById('haldi1').style.display='none';
+			document.getElementById('shaadi1').style.display='none';
+			document.getElementById('reception1').style.display='none';
+		}
+		function updatesa(val)
+		{
+			if(val=='')
+			{
+				alert('Please enter Number of People for Sangeet');
+			}
+			if(val<1)
+			{
+				document.getElementById("sanop").value = "";
+				alert('Please enter Appropriate Number of People for Sangeet');
+			}
+			else
+			{
+				sanop = val;
+			}
+		}
+		function updateme(val)
+		{
+			if(val=='')
+			{
+				alert('Please enter Number of People for Mehendi');
+			}
+			if(val<1)
+			{
+				document.getElementById("menop").value = "";
+				alert('Please enter Appropriate Number of People for Mehendi');
+			}
+			else
+			{
+				menop = val;
+			}
+		}
+		function updateha(val)
+		{
+			if(val=='')
+			{
+				alert('Please enter Number of People for Haldi');
+			}
+			if(val<1)
+			{
+				document.getElementById("hanop").value = "";
+				alert('Please enter Appropriate Number of People for Haldi');
+			}
+			else
+			{
+				hanop = val;
+			}
+		}
+		function updatesh(val)
+		{
+			if(val=='')
+			{
+				alert('Please enter Number of People for Shaadi');
+			}
+			if(val<1)
+			{
+				document.getElementById("shnop").value = "";
+				alert('Please enter Appropriate Number of People for Shaadi');
+			}
+			else
+			{
+				shnop = val;
+			}
+		}
+		function updatere(val)
+		{
+			if(val=='')
+			{
+				alert('Please enter Number of People for Reception');
+			}
+			if(val<1)
+			{
+				document.getElementById("renop").value = "";
+				alert('Please enter Appropriate Number of People for Reception');
+			}
+			else
+			{
+				renop = val;
+			}
+		}
+		function saadd(val)
+		{
+  			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost + (sanop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function meadd(val)
+		{
+  			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost + (menop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function haadd(val)
+		{
+  			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost + (hanop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function shadd(val)
+		{
+  			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost + (shnop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function readd(val)
+		{
+  			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost + (renop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function sasub(val)
+		{
+			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost - (sanop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function mesub(val)
+		{
+			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost - (menop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function hasub(val)
+		{
+			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost - (hanop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function shsub(val)
+		{
+			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost - (shnop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function resub(val)
+		{
+			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost - (renop * parseInt(http.responseText));
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function add1(val)
+		{
+  			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost + parseInt(http.responseText);
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function sub1(val)
+		{
+			var http = new XMLHttpRequest();
+  			http.abort(); // to remove any old AJAX object
+  
+  			http.open("GET","startplanning.php?cost=" + val, true);
+  			http.send();
+  
+  			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					cost = cost - parseInt(http.responseText);
+					document.getElementById("calc").innerHTML = cost;
+				}
+  			}
+
+		}
+		function checkuser(userid)
+		{
+			var http = new XMLHttpRequest();
+			http.abort();
+  
+			http.open("GET","checkuser.php?userid=" + userid, true);
+			http.send();
+  
+			http.onreadystatechange= function()
+			{
+				if(http.readyState == 4)
+				{
+					document.getElementById("checkuser").innerHTML = http.responseText;
+					
+					if(http.responseText!='')
+					{
+						document.getElementById("userid").value = '';
+					}
+					
+				}
+			}
+	
+		}
+		function checkpass(pass)
+		{
+			if(pass.length<5)
+			{
+				document.getElementById("checkpass").innerHTML = "<br>Password is too short.";
+			}
+			if(pass.length>4)
+			{
+				document.getElementById("checkpass").innerHTML = "";
+			}
+		}
+	</script>
+</head>
+<body  onload="hide()" style=' background-color:rgb(255,128,128) ;'>
+<div style=" width:100% ;">
+<div style=" width:100% ;">
+	<div style=" padding-top:20 ; height:700 ; width:100% ; background-image:url(9.jpg) ; background-size:100% 100% ; background-repeat:no-repeat ; background-position: center center ;">
+	<div style=" margin-top:20 ; height:300 ; width:100% ; background-color:rgba(255,255,255,0.5) ;">
+	<a href="homepage.html"><img style=" margin-left:36% ; margin-right:35% ;" src="logo.png" height="300" width="400"></a><!--logo div-->
+	</div>
+	<font style=" font-family:Zapfino ; font-size:30 ;"><div style=" margin-left:70% ; position:fixed ; height:250 ; width:300 ; border:solid ; background-color:rgba(255,255,255,0.8) ;">Expenses:<div style=" margin-left:5% ; position:fixed ; height:150 ; width:300 ;" id="calc"></div></div></font>
+	<div style=" padding-bottom:10 ; margin-bottom:30 ; height:100 ; text-align:center ; background-color:rgba(255,255,255,0.5) ; margin-top:200 ;">
+	<font color='rgb(0, 179, 179)' style=" font-weight:500 ; font-family:Zapfino ; font-size:40 ;"><b>
+	Start Planning
+	</b></font>
+	</div>
+	</div>
+</div>
+<!--<font style=" font-family:Zapfino ; font-size:30 ;"><div style=" margin-left:70% ; position:fixed ; height:250 ; width:300 ; background-color:rgba(255,255,255,0.8) ;">Expenses:<div style=" margin-left:5% ; position:fixed ; height:150 ; width:300 ;" id="calc"></div></div></font>-->
+<pre>
+<font style=" font-family:Zapfino ; font-size:18 ;">
+<form action="confirmpackage.php" method="post">
+<!--1sangeet div-->
+<div onclick="show1()" style=" width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:20 ;" name="sangeet" id="sangeet">
+ <b>SANGEET
+ 	<div style=" width:100% ;" name="sangeet1" id="sangeet1">
+	NUMBER OF PEOPLE :</b> <input type="number" name="sanop" id="sanop" step="10" onblur="updatesa(this.value)" required>*in multiples of 10
+	
+	<b>VENUE :</b> <select name='savenue' required>
+						<option>Select Venue</option>
+						<option value="v101">The Leela,Andheri (Rs.1,40,000)</option>
+						<option value="v102">Four Seasons,Worli (Rs.1,00,000)</option>
+						<option value="v103">De Grandeur Hotel,Thane (Rs.75,000)</option>
+						<option value="v104">Vivette Banquet,Malad (Rs.90,000)</option>
+						<option value="v105">Kohinoor Park,Dadar (Rs.120,000)</option>
+						<option value="v106">United 21,Thane (Rs.70,000)</option>
+					  </select><font color='red'><i>*Venue expenses will be added only after confirming package</i></font>
+	
+	<b>DECORATION :</b> 
+						<input type="checkbox" name="sadecor[]" value="d101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Classic Luxury
+						<input type="checkbox" name="sadecor[]" value="d102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Peacock Theme
+						<input type="checkbox" name="sadecor[]" value="d103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Rustic Chic
+						<input type="checkbox" name="sadecor[]" value="d104" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Bohemian
+						<input type="checkbox" name="sadecor[]" value="d105" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Pastel
+						<input type="checkbox" name="sadecor[]" value="d106" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Floral
+						<input type="checkbox" name="sadecor[]" value="d107" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">The Rajasthani
+						<input type="checkbox" name="sadecor[]" value="d108" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Contemporary
+					  
+	
+	<b>FOOD MENU : 
+				        STARTERS :</b> 
+	                		<input type="checkbox" name="sastarters[]" value="fs101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Kakori Kebabs
+	                		<input type="checkbox" name="sastarters[]" value="fs102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Microwave Paneer Tikkas
+	                		<input type="checkbox" name="sastarters[]" value="fs103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Aloo and Dal ki Tikki
+	            			<input type="checkbox" name="sastarters[]" value="fs104" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Mushroom Pesto Crostini
+	            			<input type="checkbox" name="sastarters[]" value="fs105" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Fig, Cream Cheese and Mint Tart
+	            			<input type="checkbox" name="sastarters[]" value="fs106" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Chicken Satay
+	            			<input type="checkbox" name="sastarters[]" value="fs107" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Bhuna Masala Chicken Wings
+	            			<input type="checkbox" name="sastarters[]" value="fs108" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Stir Fried Chilli Chicken
+	            			<input type="checkbox" name="sastarters[]" value="fs109" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Hot Basil Chicken Cups
+	            			<input type="checkbox" name="sastarters[]" value="fs110" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Crumb-Fried Chicken
+	                  
+	                		<b>MAIN COURSE :</b> 
+	                        	<input type="checkbox" name="samaincourse[]" value="fm101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Paneer Lababdaar
+	                        	<input type="checkbox" name="samaincourse[]" value="fm102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Bhindi Masala
+	                        	<input type="checkbox" name="samaincourse[]" value="fm103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Tawa Mushroom
+	                        	<input type="checkbox" name="samaincourse[]" value="fm104" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Malai Kofta
+	                        	<input type="checkbox" name="samaincourse[]" value="fm105" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Subzi Da Kheema
+	                        	<input type="checkbox" name="samaincourse[]" value="fm106" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Nimbu Chicken Curry
+	                        	<input type="checkbox" name="samaincourse[]" value="fm107" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Murgh Ambarsariya
+	                        	<input type="checkbox" name="samaincourse[]" value="fm108" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Peshwari Meat
+	                        	<input type="checkbox" name="samaincourse[]" value="fm109" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Tawa Prawns
+	                        	<input type="checkbox" name="samaincourse[]" value="fm110" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Seafood Platter
+	                  
+	                		<b>BREADS/ROTIS :</b> 
+	                        	<input type="checkbox" name="saroti[]" value="frot101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Tandoori Roti
+	                        	<input type="checkbox" name="saroti[]" value="frot102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Rumali Roti
+	                        	<input type="checkbox" name="saroti[]" value="frot103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Makai Di Roti
+	                    		<input type="checkbox" name="saroti[]" value="fnan101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Naan
+	                    		<input type="checkbox" name="saroti[]" value="fnan102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Garlic Naan
+	                    		<input type="checkbox" name="saroti[]" value="fnan103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Baby Cheese Naan
+	                  
+	                		<b>RICE/NOODLES :</b> 
+	                        	<input type="checkbox" name="sarice[]" value="fr101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Steamed Rice
+	                        	<input type="checkbox" name="sarice[]" value="fr102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Vegetable Fried Rice
+	                        	<input type="checkbox" name="sarice[]" value="fr103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Roast Chicken Fried Rice
+	                        	<input type="checkbox" name="sarice[]" value="fr104" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Mahlak Prawns Rice
+	                        	<input type="checkbox" name="sarice[]" value="fn101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Wok Tossed Hakka Noodles
+	                        	<input type="checkbox" name="sarice[]" value="fn102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Cantonese Rice Noodles
+	                        	<input type="checkbox" name="sarice[]" value="fn103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Chicken Garlic Noodles
+	                        	<input type="checkbox" name="sarice[]" value="fn104" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Pan Fried Prawns Noodles
+	                  
+	                		<b>DAALS :</b> 
+	                        	<input type="checkbox" name="sadaal[]" value="fdaa101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Daal Makhani
+	                        	<input type="checkbox" name="sadaal[]" value="fdaa102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Tadkeywali Daal
+	                        	<input type="checkbox" name="sadaal[]" value="fdaa103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Rajma Tariwale
+	                        	
+	                		<b>DESSERT :</b> 
+	                        	<input type="checkbox" name="sadessert[]" value="fd101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Gulab Jamun
+	                        	<input type="checkbox" name="sadessert[]" value="fd102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Rasmalai
+	                        	<input type="checkbox" name="sadessert[]" value="fd103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Jalebi Rabdi
+	                        	<input type="checkbox" name="sadessert[]" value="fd104" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Malai Kulfi
+	                        	<input type="checkbox" name="sadessert[]" value="fd105" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Tiramisu
+	                        	<input type="checkbox" name="sadessert[]" value="fd106" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Blueberry Cheesecake
+	                        	<input type="checkbox" name="sadessert[]" value="fd107" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Icecream Cake
+	                        	<input type="checkbox" name="sadessert[]" value="fd108" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Walnut Halwa
+	                        	<input type="checkbox" name="sadessert[]" value="fd109" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Chocolate Brownie
+	                        	<input type="checkbox" name="sadessert[]" value="fd110" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Panna Cotta
+	                        	
+	                    		<b>NON-ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="sanonalcoholic[]" value="fnab101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Pinacolada
+	                        	<input type="checkbox" name="sanonalcoholic[]" value="fnab102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">PineappleOrange Sherbert Punch
+	                        	<input type="checkbox" name="sanonalcoholic[]" value="fnab103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Margarita Mocktail
+	                        	<input type="checkbox" name="sanonalcoholic[]" value="fnab104" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Mint-Lime Iced Tea
+	                        	<input type="checkbox" name="sanonalcoholic[]" value="fnab105" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Watermelon Margarita
+	                        	
+	                    		<b>ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="saalcoholic[]" value="fab101" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Champagne
+	                        	<input type="checkbox" name="saalcoholic[]" value="fab102" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Red Wine
+	                        	<input type="checkbox" name="saalcoholic[]" value="fab103" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">White Wine
+	                        	<input type="checkbox" name="saalcoholic[]" value="fab104" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Scotch
+	                        	<input type="checkbox" name="saalcoholic[]" value="fab105" onchange="if(this.checked){saadd(this.value);}else{sasub(this.value);}">Bourbon
+	
+	<b>ENTERTAINMENT : 
+				        MUSIC :</b> 
+	                        	<input type="checkbox" name="samusic[]" value="em101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Band
+	                        	<input type="checkbox" name="samusic[]" value="em102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">DJ
+	                  
+	                  		<b>DANCE :</b> 
+	                          	<input type="checkbox" name="sadance[]" value="ed101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Choreographer
+	                          	<input type="checkbox" name="sadance[]" value="ed102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Performers
+	
+	<b>SERVICES :</b> 
+	                  		<input type="checkbox" name="saservices[]" value="sc101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Photographer
+	                  		<input type="checkbox" name="saservices[]" value="sc102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Videographer
+	                  		<input type="checkbox" name="saservices[]" value="sc103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Stylist and Hair-dresser
+	</div>
+</div>
+<!--2mehendi div-->
+<div onclick="show2()" style=" width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:20 ;" name="mehendi" id="mehendi">
+ <b>MEHENDI
+	<div style=" width:100% ;" name="mehendi1" id="mehendi1">
+	NUMBER OF PEOPLE :</b> <input type="number" name="menop" id="menop" step="10" onblur="updateme(this.value)" required>*in multiples of 10
+	
+	<b>VENUE :</b> <select name='mevenue' required>
+						<option>Select Venue</option>
+						<option value="v101">The Leela,Andheri (Rs.1,40,000)</option>
+						<option value="v102">Four Seasons,Worli (Rs.1,00,000)</option>
+						<option value="v103">De Grandeur Hotel,Thane (Rs.75,000)</option>
+						<option value="v104">Vivette Banquet,Malad (Rs.90,000)</option>
+						<option value="v105">Kohinoor Park,Dadar (Rs.120,000)</option>
+						<option value="v106">United 21,Thane (Rs.70,000)</option>
+					  </select>
+	
+	<b>DECORATION :</b> 
+						<input type="checkbox" name="medecor[]" value="d101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Classic Luxury
+						<input type="checkbox" name="medecor[]" value="d102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Peacock Theme
+						<input type="checkbox" name="medecor[]" value="d103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Rustic Chic
+						<input type="checkbox" name="medecor[]" value="d104" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Bohemian
+						<input type="checkbox" name="medecor[]" value="d105" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Pastel
+						<input type="checkbox" name="medecor[]" value="d106" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Floral
+						<input type="checkbox" name="medecor[]" value="d107" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">The Rajasthani
+						<input type="checkbox" name="medecor[]" value="d108" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Contemporary
+					  
+	
+	<b>FOOD MENU : 
+				        STARTERS :</b> 
+	                		<input type="checkbox" name="mestarters[]" value="fs101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Kakori Kebabs
+	                		<input type="checkbox" name="mestarters[]" value="fs102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Microwave Paneer Tikkas
+	                		<input type="checkbox" name="mestarters[]" value="fs103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Aloo and Dal ki Tikki
+	            			<input type="checkbox" name="mestarters[]" value="fs104" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Mushroom Pesto Crostini
+	            			<input type="checkbox" name="mestarters[]" value="fs105" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Fig, Cream Cheese and Mint Tart
+	            			<input type="checkbox" name="mestarters[]" value="fs106" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Chicken Satay
+	            			<input type="checkbox" name="mestarters[]" value="fs107" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Bhuna Masala Chicken Wings
+	            			<input type="checkbox" name="mestarters[]" value="fs108" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Stir Fried Chilli Chicken
+	            			<input type="checkbox" name="mestarters[]" value="fs109" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Hot Basil Chicken Cups
+	            			<input type="checkbox" name="mestarters[]" value="fs110" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Crumb-Fried Chicken
+	                  
+	                		<b>MAIN COURSE :</b> 
+	                        	<input type="checkbox" name="memaincourse[]" value="fm101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Paneer Lababdaar
+	                        	<input type="checkbox" name="memaincourse[]" value="fm102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Bhindi Masala
+	                        	<input type="checkbox" name="memaincourse[]" value="fm103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Tawa Mushroom
+	                        	<input type="checkbox" name="memaincourse[]" value="fm104" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Malai Kofta
+	                        	<input type="checkbox" name="memaincourse[]" value="fm105" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Subzi Da Kheema
+	                        	<input type="checkbox" name="memaincourse[]" value="fm106" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Nimbu Chicken Curry
+	                        	<input type="checkbox" name="memaincourse[]" value="fm107" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Murgh Ambarsariya
+	                        	<input type="checkbox" name="memaincourse[]" value="fm108" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Peshwari Meat
+	                        	<input type="checkbox" name="memaincourse[]" value="fm109" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Tawa Prawns
+	                        	<input type="checkbox" name="memaincourse[]" value="fm110" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Seafood Platter
+	                  
+	                		<b>BREADS/ROTIS :</b> 
+	                        	<input type="checkbox" name="meroti[]" value="frot101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Tandoori Roti
+	                        	<input type="checkbox" name="meroti[]" value="frot102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Rumali Roti
+	                        	<input type="checkbox" name="meroti[]" value="frot103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Makai Di Roti
+	                    		<input type="checkbox" name="meroti[]" value="fnan101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Naan
+	                    		<input type="checkbox" name="meroti[]" value="fnan102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Garlic Naan
+	                    		<input type="checkbox" name="meroti[]" value="fnan103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Baby Cheese Naan
+	                  
+	                		<b>RICE/NOODLES :</b> 
+	                        	<input type="checkbox" name="merice[]" value="fr101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Steamed Rice
+	                        	<input type="checkbox" name="merice[]" value="fr102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Vegetable Fried Rice
+	                        	<input type="checkbox" name="merice[]" value="fr103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Roast Chicken Fried Rice
+	                        	<input type="checkbox" name="merice[]" value="fr104" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Mahlak Prawns Rice
+	                        	<input type="checkbox" name="merice[]" value="fn101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Wok Tossed Hakka Noodles
+	                        	<input type="checkbox" name="merice[]" value="fn102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Cantonese Rice Noodles
+	                        	<input type="checkbox" name="merice[]" value="fn103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Chicken Garlic Noodles
+	                        	<input type="checkbox" name="merice[]" value="fn104" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Pan Fried Prawns Noodles
+	                  
+	                		<b>DAALS :</b> 
+	                        	<input type="checkbox" name="medaal[]" value="fdaa101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Daal Makhani
+	                        	<input type="checkbox" name="medaal[]" value="fdaa102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Tadkeywali Daal
+	                        	<input type="checkbox" name="medaal[]" value="fdaa103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Rajma Tariwale
+	                        	
+	                		<b>DESSERT :</b> 
+	                        	<input type="checkbox" name="medessert[]" value="fd101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Gulab Jamun
+	                        	<input type="checkbox" name="medessert[]" value="fd102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Rasmalai
+	                        	<input type="checkbox" name="medessert[]" value="fd103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Jalebi Rabdi
+	                        	<input type="checkbox" name="medessert[]" value="fd104" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Malai Kulfi
+	                        	<input type="checkbox" name="medessert[]" value="fd105" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Tiramisu
+	                        	<input type="checkbox" name="medessert[]" value="fd106" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Blueberry Cheesecake
+	                        	<input type="checkbox" name="medessert[]" value="fd107" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Icecream Cake
+	                        	<input type="checkbox" name="medessert[]" value="fd108" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Walnut Halwa
+	                        	<input type="checkbox" name="medessert[]" value="fd109" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Chocolate Brownie
+	                        	<input type="checkbox" name="medessert[]" value="fd110" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Panna Cotta
+	                        	
+	                        	<b>NON-ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="menonalcoholic[]" value="fnab101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Pinacolada
+	                        	<input type="checkbox" name="menonalcoholic[]" value="fnab102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Pineapple-Orange Sherbert Punch
+	                        	<input type="checkbox" name="menonalcoholic[]" value="fnab103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Margarita Mocktail
+	                        	<input type="checkbox" name="menonalcoholic[]" value="fnab104" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Mint-Lime Iced Tea
+	                        	<input type="checkbox" name="menonalcoholic[]" value="fnab105" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Watermelon Margarita
+	                        	
+	                        	<b>ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="mealcoholic[]" value="fab101" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Champagne
+	                        	<input type="checkbox" name="mealcoholic[]" value="fab102" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Red Wine
+	                        	<input type="checkbox" name="mealcoholic[]" value="fab103" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">White Wine
+	                        	<input type="checkbox" name="mealcoholic[]" value="fab104" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Scotch
+	                        	<input type="checkbox" name="mealcoholic[]" value="fab105" onchange="if(this.checked){meadd(this.value);}else{mesub(this.value);}">Bourbon
+	
+	<b>ENTERTAINMENT : 
+				        MUSIC :</b> 
+	                        	<input type="checkbox" name="memusic[]" value="em101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Band
+	                        	<input type="checkbox" name="memusic[]" value="em101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">DJ
+	                  
+	                  		<b>DANCE :</b> 
+	                          	<input type="checkbox" name="medance[]" value="ed101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Choreographer
+	                          	<input type="checkbox" name="medance[]" value="ed102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Performers
+	
+	<b>SERVICES :</b>
+	                  		<input type="checkbox" name="meservices[]" value="sc101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Photographer
+	                  		<input type="checkbox" name="meservices[]" value="sc102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Videographer
+	                  		<input type="checkbox" name="meservices[]" value="sc103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Stylist and Hair-dresser
+	                  		<input type="checkbox" name="meservices[]" value="sm101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Mehendi Artist
+	</div>
+</div>
+<!--3haldi div-->
+<div onclick="show3()" style=" width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:20 ;" name="haldi" id="haldi">
+ <b>HALDI
+	<div style=" width:100% ;" name="haldi1" id="haldi1">
+	NUMBER OF PEOPLE:</b> <input type="number" name="hanop" id="hanop" step="10" onblur="updateha(this.value)" required>*in multiples of 10
+	
+ 	<b>VENUE :</b> <select name='havenue' required>
+						<option>Select Venue</option>
+						<option value="v101">The Leela,Andheri (Rs.1,40,000)</option>
+						<option value="v102">Four Seasons,Worli (Rs.1,00,000)</option>
+						<option value="v103">De Grandeur Hotel,Thane (Rs.75,000)</option>
+						<option value="v104">Vivette Banquet,Malad (Rs.90,000)</option>
+						<option value="v105">Kohinoor Park,Dadar (Rs.120,000)</option>
+						<option value="v106">United 21,Thane (Rs.70,000)</option>
+					  </select>
+	
+ 	<b>DECORATION :</b> 
+						<input type="checkbox" name="hadecor[]" value="d101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Classic Luxury						
+						<input type="checkbox" name="hadecor[]" value="d102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Peacock Theme						
+						<input type="checkbox" name="hadecor[]" value="d103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Rustic Chic
+						<input type="checkbox" name="hadecor[]" value="d104" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Bohemian
+						<input type="checkbox" name="hadecor[]" value="d105" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Pastel
+						<input type="checkbox" name="hadecor[]" value="d106" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Floral
+						<input type="checkbox" name="hadecor[]" value="d107" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">The Rajasthani
+						<input type="checkbox" name="hadecor[]" value="d108" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Contemporary
+					  
+	
+ 	<b>FOOD MENU : 
+				        STARTERS :</b> 
+	                		<input type="checkbox" name="hastarters[]" value="fs101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Kakori Kebabs
+	                		<input type="checkbox" name="hastarters[]" value="fs102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Microwave Paneer Tikkas
+	                		<input type="checkbox" name="hastarters[]" value="fs103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Aloo and Dal ki Tikki
+	            			<input type="checkbox" name="hastarters[]" value="fs104" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Mushroom Pesto Crostini
+	            			<input type="checkbox" name="hastarters[]" value="fs105" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Fig, Cream Cheese and Mint Tart
+	            			<input type="checkbox" name="hastarters[]" value="fs106" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Chicken Satay
+	            			<input type="checkbox" name="hastarters[]" value="fs107" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Bhuna Masala Chicken Wings
+	            			<input type="checkbox" name="hastarters[]" value="fs108" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Stir Fried Chilli Chicken
+	            			<input type="checkbox" name="hastarters[]" value="fs109" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Hot Basil Chicken Cups
+	            			<input type="checkbox" name="hastarters[]" value="fs110" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Crumb-Fried Chicken
+	                  
+	                		<b>MAIN COURSE :</b> 
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Paneer Lababdaar
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Bhindi Masala
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Tawa Mushroom
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm104" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Malai Kofta
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm105" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Subzi Da Kheema
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm106" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Nimbu Chicken Curry
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm107" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Murgh Ambarsariya
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm108" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Peshwari Meat
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm109" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Tawa Prawns
+	                        	<input type="checkbox" name="hamaincourse[]" value="fm110" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Seafood Platter
+	                  
+	                		<b>BREADS/ROTIS :</b>
+	                        	<input type="checkbox" name="haroti[]" value="frot101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Tandoori Roti
+	                        	<input type="checkbox" name="haroti[]" value="frot102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Rumali Roti
+	                        	<input type="checkbox" name="haroti[]" value="frot103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Makai Di Roti
+	                    		<input type="checkbox" name="haroti[]" value="fnan101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Naan
+	                    		<input type="checkbox" name="haroti[]" value="fnan102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Garlic Naan
+	                    		<input type="checkbox" name="haroti[]" value="fnan103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Baby Cheese Naan
+	                  
+	                		<b>RICE/NOODLES :</b>
+	                        	<input type="checkbox" name="harice[]" value="fr101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Steamed Rice
+	                        	<input type="checkbox" name="harice[]" value="fr102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Vegetable Fried Rice
+	                        	<input type="checkbox" name="harice[]" value="fr103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Roast Chicken Fried Rice
+	                        	<input type="checkbox" name="harice[]" value="fr104" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Mahlak Prawns Rice
+	                        	<input type="checkbox" name="harice[]" value="fn101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Wok Tossed Hakka Noodles
+	                        	<input type="checkbox" name="harice[]" value="fn102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Cantonese Rice Noodles
+	                        	<input type="checkbox" name="harice[]" value="fn103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Chicken Garlic Noodles
+	                        	<input type="checkbox" name="harice[]" value="fn104" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Pan Fried Prawns Noodles
+	                  
+	                		<b>DAALS :</b> 
+	                        	<input type="checkbox" name="hadaal[]" value="fdaa101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Daal Makhani
+	                        	<input type="checkbox" name="hadaal[]" value="fdaa102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Tadkeywali Daal
+	                        	<input type="checkbox" name="hadaal[]" value="fdaa103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Rajma Tariwale
+	                        	
+	                		<b>DESSERT :</b>
+	                        	<input type="checkbox" name="hadessert[]" value="fd101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Gulab Jamun
+	                        	<input type="checkbox" name="hadessert[]" value="fd102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Rasmalai
+	                        	<input type="checkbox" name="hadessert[]" value="fd103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Jalebi Rabdi
+	                        	<input type="checkbox" name="hadessert[]" value="fd104" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Malai Kulfi
+	                        	<input type="checkbox" name="hadessert[]" value="fd105" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Tiramisu
+	                        	<input type="checkbox" name="hadessert[]" value="fd106" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Blueberry Cheesecake
+	                        	<input type="checkbox" name="hadessert[]" value="fd107" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Icecream Cake
+	                        	<input type="checkbox" name="hadessert[]" value="fd108" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Walnut Halwa
+	                        	<input type="checkbox" name="hadessert[]" value="fd109" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Chocolate Brownie
+	                        	<input type="checkbox" name="hadessert[]" value="fd110" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Panna Cotta
+	                        	
+	                        	<b>NON-ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="hanonalcoholic[]" value="fnab101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Pinacolada
+	                        	<input type="checkbox" name="hanonalcoholic[]" value="fnab102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Pineapple-Orange Sherbert Punch
+	                        	<input type="checkbox" name="hanonalcoholic[]" value="fnab103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Margarita Mocktail
+	                        	<input type="checkbox" name="hanonalcoholic[]" value="fnab104" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Mint-Lime Iced Tea
+	                        	<input type="checkbox" name="hanonalcoholic[]" value="fnab105" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Watermelon Margarita
+	                        	
+	                        	<b>ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="haalcoholic[]" value="fab101" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Champagne
+	                        	<input type="checkbox" name="haalcoholic[]" value="fab102" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Red Wine
+	                        	<input type="checkbox" name="haalcoholic[]" value="fab103" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">White Wine
+	                        	<input type="checkbox" name="haalcoholic[]" value="fab104" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Scotch
+	                        	<input type="checkbox" name="haalcoholic[]" value="fab105" onchange="if(this.checked){haadd(this.value);}else{hasub(this.value);}">Bourbon
+	
+	<b>ENTERTAINMENT : 
+				        MUSIC :</b> 
+	                        	<input type="checkbox" name="hamusic[]" value="em101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Band
+	                        	<input type="checkbox" name="hamusic[]" value="em102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">DJ
+	                  
+	                  		<b>DANCE :</b> 
+	                          	<input type="checkbox" name="hadance[]" value="ed101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Choreographer
+	                          	<input type="checkbox" name="hadance[]" value="ed102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Performers
+	
+	<b>SERVICES :</b>
+	                  		<input type="checkbox" name="haservices[]" value="sc101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Photographer
+	                  		<input type="checkbox" name="haservices[]" value="sc102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Videographer
+	                  		<input type="checkbox" name="haservices[]" value="sc103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Stylist and Hair-dresser
+	                  		<input type="checkbox" name="haservices[]" value="sh101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Haldi Services
+	                  		<input type="checkbox" name="haservices[]" value="sh102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Pandit
+	</div>
+</div>
+<div style=" height:250 ; background-image:url(36.jpg) ; background-size:100% auto ; background-repeat:no-repeat ; background-position: center center ;"></div>
+<!--4shaadi div-->
+<div onclick="show4()" style=" width:100% ; background-color:rgba(255,255,255,0.6) ;" name="shaadi" id="shaadi">
+ <b>SHAADI
+	<div style=" width:100% ;" name="shaadi1" id="shaadi1">
+	NUMBER OF PEOPLE :</b> <input type="number" name="shnop" id="shnop" step="10" onblur="updatesh(this.value)" required>*in multiples of 10
+	
+	<b>VENUE :</b> <select name='shvenue' required>
+						<option>Select Venue</option>
+						<option value="v101">The Leela,Andheri (Rs.1,40,000)</option>
+						<option value="v102">Four Seasons,Worli (Rs.1,00,000)</option>
+						<option value="v103">De Grandeur Hotel,Thane (Rs.75,000)</option>
+						<option value="v104">Vivette Banquet,Malad (Rs.90,000)</option>
+						<option value="v105">Kohinoor Park,Dadar (Rs.120,000)</option>
+						<option value="v106">United 21,Thane (Rs.70,000)</option>
+					  </select>
+	
+	<b>DECORATION :</b> 
+						<input type="checkbox" name="shdecor[]" value="d101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Classic Luxury
+						<input type="checkbox" name="shdecor[]" value="d102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Peacock Theme
+						<input type="checkbox" name="shdecor[]" value="d103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Rustic Chic
+						<input type="checkbox" name="shdecor[]" value="d104" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Bohemian
+						<input type="checkbox" name="shdecor[]" value="d105" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Pastel
+						<input type="checkbox" name="shdecor[]" value="d106" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Floral
+						<input type="checkbox" name="shdecor[]" value="d107" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">The Rajasthani
+						<input type="checkbox" name="shdecor[]" value="d108" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Contemporary
+					  
+	
+	<b>MANDAP :</b> 
+						<input type="checkbox" name="shmandap[]" value="m101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Canopy of Roses
+						<input type="checkbox" name="shmandap[]" value="m102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Chandelier Royalty
+						<input type="checkbox" name="shmandap[]" value="m103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Lotus Mandap
+	
+	<b>FOOD MENU : 
+				        STARTERS :</b> 
+	                		<input type="checkbox" name="shstarters[]" value="fs101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Kakori Kebabs
+	                		<input type="checkbox" name="shstarters[]" value="fs102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Microwave Paneer Tikkas
+	                		<input type="checkbox" name="shstarters[]" value="fs103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Aloo and Dal ki Tikki
+	            			<input type="checkbox" name="shstarters[]" value="fs104" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Mushroom Pesto Crostini
+	            			<input type="checkbox" name="shstarters[]" value="fs105" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Fig, Cream Cheese and Mint Tart
+	            			<input type="checkbox" name="shstarters[]" value="fs106" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Chicken Satay
+	            			<input type="checkbox" name="shstarters[]" value="fs107" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Bhuna Masala Chicken Wings
+	            			<input type="checkbox" name="shstarters[]" value="fs108" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Stir Fried Chilli Chicken
+	            			<input type="checkbox" name="shstarters[]" value="fs109" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Hot Basil Chicken Cups
+	            			<input type="checkbox" name="shstarters[]" value="fs110" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Crumb-Fried Chicken
+	                  
+	                		<b>MAIN COURSE :</b> 
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Paneer Lababdaar
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Bhindi Masala
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Tawa Mushroom
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm104" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Malai Kofta
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm105" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Subzi Da Kheema
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm106" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Nimbu Chicken Curry
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm107" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Murgh Ambarsariya
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm108" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Peshwari Meat
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm109" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Tawa Prawns
+	                        	<input type="checkbox" name="shmaincourse[]" value="fm110" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Seafood Platter
+	                  
+	                		<b>BREADS/ROTIS :</b> 
+	                        	<input type="checkbox" name="shroti[]" value="frot101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Tandoori Roti
+	                        	<input type="checkbox" name="shroti[]" value="frot102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Rumali Roti
+	                        	<input type="checkbox" name="shroti[]" value="frot103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Makai Di Roti
+	                    		<input type="checkbox" name="shroti[]" value="fnan101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Naan
+	                    		<input type="checkbox" name="shroti[]" value="fnan102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Garlic Naan
+	                    		<input type="checkbox" name="shroti[]" value="fnan103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Baby Cheese Naan
+	                  
+	                		<b>RICE/NOODLES :</b> 
+	                        	<input type="checkbox" name="shrice[]" value="fr101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Steamed Rice
+	                        	<input type="checkbox" name="shrice[]" value="fr102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Vegetable Fried Rice
+	                        	<input type="checkbox" name="shrice[]" value="fr103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Roast Chicken Fried Rice
+	                        	<input type="checkbox" name="shrice[]" value="fr104" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Mahlak Prawns Rice
+	                        	<input type="checkbox" name="shrice[]" value="fn101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Wok Tossed Hakka Noodles
+	                        	<input type="checkbox" name="shrice[]" value="fn102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Cantonese Rice Noodles
+	                        	<input type="checkbox" name="shrice[]" value="fn103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Chicken Garlic Noodles
+	                        	<input type="checkbox" name="shrice[]" value="fn104" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Pan Fried Prawns Noodles
+	                  
+	                		<b>DAALS :</b> 
+	                        	<input type="checkbox" name="shdaal[]" value="fdaa101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Daal Makhani
+	                        	<input type="checkbox" name="shdaal[]" value="fdaa102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Tadkeywali Daal
+	                        	<input type="checkbox" name="shdaal[]" value="fdaa103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Rajma Tariwale
+	                        	
+	                		<b>DESSERT :</b> 
+	                        	<input type="checkbox" name="shdessert[]" value="fd101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Gulab Jamun
+	                        	<input type="checkbox" name="shdessert[]" value="fd102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Rasmalai
+	                        	<input type="checkbox" name="shdessert[]" value="fd103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Jalebi Rabdi
+	                        	<input type="checkbox" name="shdessert[]" value="fd104" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Malai Kulfi
+	                        	<input type="checkbox" name="shdessert[]" value="fd105" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Tiramisu
+	                        	<input type="checkbox" name="shdessert[]" value="fd106" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Blueberry Cheesecake
+	                        	<input type="checkbox" name="shdessert[]" value="fd107" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Icecream Cake
+	                        	<input type="checkbox" name="shdessert[]" value="fd108" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Walnut Halwa
+	                        	<input type="checkbox" name="shdessert[]" value="fd109" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Chocolate Brownie
+	                        	<input type="checkbox" name="shdessert[]" value="fd110" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Panna Cotta
+	                        	
+	                        	<b>NON-ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="shnonalcoholic[]" value="fnab101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Pinacolada
+	                        	<input type="checkbox" name="shnonalcoholic[]" value="fnab102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Pineapple-Orange Sherbert Punch
+	                        	<input type="checkbox" name="shnonalcoholic[]" value="fnab103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Margarita Mocktail
+	                        	<input type="checkbox" name="shnonalcoholic[]" value="fnab104" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}" >Mint-Lime Iced Tea
+	                        	<input type="checkbox" name="shnonalcoholic[]" value="fnab105" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Watermelon Margarita
+	                        	
+	                        	<b>ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="shalcoholic[]" value="fab101" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Champagne
+	                        	<input type="checkbox" name="shalcoholic[]" value="fab102" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Red Wine
+	                        	<input type="checkbox" name="shalcoholic[]" value="fab103" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">White Wine
+	                        	<input type="checkbox" name="shalcoholic[]" value="fab104" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Scotch
+	                        	<input type="checkbox" name="shalcoholic[]" value="fab105" onchange="if(this.checked){shadd(this.value);}else{shsub(this.value);}">Bourbon
+	
+	<b>ENTERTAINMENT : 
+				        MUSIC :</b> 
+	                        	<input type="checkbox" name="shmusic[]" value="em101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Band
+	                        	<input type="checkbox" name="shmusic[]" value="em102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">DJ
+	                  
+	                  		<b>DANCE :</b> 
+	                          	<input type="checkbox" name="shdance[]" value="ed101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Choreographer
+	                          	<input type="checkbox" name="shdance[]" value="ed102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Performers
+	
+	<b>SERVICES :</b>
+	                  		<input type="checkbox" name="shservices[]" value="sc101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Photographer
+	                  		<input type="checkbox" name="shservices[]" value="sc102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Videographer
+	                  		<input type="checkbox" name="shservices[]" value="sc103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Stylist and Hair-dresser
+	                  		<input type="checkbox" name="shservices[]" value="ss101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Pandit
+	                  		<input type="checkbox" name="shservices[]" value="ss102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Bridal Make-up Service
+	</div>
+</div>
+<div style=" height:250 ; background-image:url(35.jpg) ; background-size:100% auto ; background-repeat:no-repeat ; background-position: center center ;"></div>
+<!--5reception div-->
+<div onclick="show5()" style=" width:100% ; background-color:rgba(255,255,255,0.6) ; margin-bottom:20 ;" name="reception" id="reception">
+ <b>RECEPTION
+	<div style=" width:100% ;" name="reception1" id="reception1">
+	NUMBER OF PEOPLE:</b> <input type="number" name="renop" id="renop" step="10" onblur="updatere(this.value)" required>*in multiples of 10
+	
+	<b>VENUE :</b> <select name='revenue' required>
+						<option>Select Venue</option>
+						<option value="v101">The Leela,Andheri (Rs.1,40,000)</option>
+						<option value="v102">Four Seasons,Worli (Rs.1,00,000)</option>
+						<option value="v103">De Grandeur Hotel,Thane (Rs.75,000)</option>
+						<option value="v104">Vivette Banquet,Malad (Rs.90,000)</option>
+						<option value="v105">Kohinoor Park,Dadar (Rs.120,000)</option>
+						<option value="v106">United 21,Thane (Rs.70,000)</option>
+					  </select>
+	
+	<b>DECORATION :</b> 
+						<input type="checkbox" name="redecor[]" value="d101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Classic Luxury
+						<input type="checkbox" name="redecor[]" value="d102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Peacock Theme
+						<input type="checkbox" name="redecor[]" value="d103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Rustic Chic
+						<input type="checkbox" name="redecor[]" value="d104" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Bohemian
+						<input type="checkbox" name="redecor[]" value="d105" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Pastel
+						<input type="checkbox" name="redecor[]" value="d106" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Floral
+						<input type="checkbox" name="redecor[]" value="d107" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">The Rajasthani
+						<input type="checkbox" name="redecor[]" value="d108" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Contemporary
+					  
+	
+	<b>FOOD MENU : 
+				        STARTERS :</b> 
+	                		<input type="checkbox" name="restarters[]" value="fs101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Kakori Kebabs
+	                		<input type="checkbox" name="restarters[]" value="fs102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Microwave Paneer Tikkas
+	                		<input type="checkbox" name="restarters[]" value="fs103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Aloo and Dal ki Tikki
+	            			<input type="checkbox" name="restarters[]" value="fs104" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Mushroom Pesto Crostini
+	            			<input type="checkbox" name="restarters[]" value="fs105" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Fig, Cream Cheese and Mint Tart
+	            			<input type="checkbox" name="restarters[]" value="fs106" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Chicken Satay
+	            			<input type="checkbox" name="restarters[]" value="fs107" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Bhuna Masala Chicken Wings
+	            			<input type="checkbox" name="restarters[]" value="fs108" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Stir Fried Chilli Chicken
+	            			<input type="checkbox" name="restarters[]" value="fs109" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Hot Basil Chicken Cups
+	            			<input type="checkbox" name="restarters[]" value="fs110" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Crumb-Fried Chicken
+	                  
+	                		<b>MAIN COURSE :</b> 
+	                        	<input type="checkbox" name="remaincourse[]" value="fm101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Paneer Lababdaar
+	                        	<input type="checkbox" name="remaincourse[]" value="fm102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Bhindi Masala
+	                        	<input type="checkbox" name="remaincourse[]" value="fm103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Tawa Mushroom
+	                        	<input type="checkbox" name="remaincourse[]" value="fm104" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Malai Kofta
+	                        	<input type="checkbox" name="remaincourse[]" value="fm105" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Subzi Da Kheema
+	                        	<input type="checkbox" name="remaincourse[]" value="fm106" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Nimbu Chicken Curry
+	                        	<input type="checkbox" name="remaincourse[]" value="fm107" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Murgh Ambarsariya
+	                        	<input type="checkbox" name="remaincourse[]" value="fm108" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Peshwari Meat
+	                        	<input type="checkbox" name="remaincourse[]" value="fm109" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Tawa Prawns
+	                        	<input type="checkbox" name="remaincourse[]" value="fm110" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Seafood Platter
+	                  
+	                		<b>BREADS/ROTIS :</b> 
+	                        	<input type="checkbox" name="reroti[]" value="frot101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Tandoori Roti
+	                        	<input type="checkbox" name="reroti[]" value="frot102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Rumali Roti
+	                        	<input type="checkbox" name="reroti[]" value="frot103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Makai Di Roti
+	                    		<input type="checkbox" name="reroti[]" value="fnan101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Naan
+	                    		<input type="checkbox" name="reroti[]" value="fnan102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Garlic Naan
+	                    		<input type="checkbox" name="reroti[]" value="fnan103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Baby Cheese Naan
+	                  
+	                		<b>RICE/NOODLES :</b> 
+	                        	<input type="checkbox" name="rerice[]" value="fr101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Steamed Rice
+	                        	<input type="checkbox" name="rerice[]" value="fr102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Vegetable Fried Rice
+	                        	<input type="checkbox" name="rerice[]" value="fr103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Roast Chicken Fried Rice
+	                        	<input type="checkbox" name="rerice[]" value="fr104" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Mahlak Prawns Rice
+	                        	<input type="checkbox" name="rerice[]" value="fn101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Wok Tossed Hakka Noodles
+	                        	<input type="checkbox" name="rerice[]" value="fn102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Cantonese Rice Noodles
+	                        	<input type="checkbox" name="rerice[]" value="fn103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Chicken Garlic Noodles
+	                        	<input type="checkbox" name="rerice[]" value="fn104" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Pan Fried Prawns Noodles
+	                  
+	                		<b>DAALS :</b> 
+	                        	<input type="checkbox" name="redaal[]" value="fdaa101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Daal Makhani
+	                        	<input type="checkbox" name="redaal[]" value="fdaa102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Tadkeywali Daal
+	                        	<input type="checkbox" name="redaal[]" value="fdaa103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Rajma Tariwale
+	                        	
+	                		<b>DESSERT :</b> 
+	                        	<input type="checkbox" name="redessert[]" value="fd101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Gulab Jamun
+	                        	<input type="checkbox" name="redessert[]" value="fd102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Rasmalai
+	                        	<input type="checkbox" name="redessert[]" value="fd103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Jalebi Rabdi
+	                        	<input type="checkbox" name="redessert[]" value="fd104" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Malai Kulfi
+	                        	<input type="checkbox" name="redessert[]" value="fd105" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Tiramisu
+	                        	<input type="checkbox" name="redessert[]" value="fd106" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Blueberry Cheesecake
+	                        	<input type="checkbox" name="redessert[]" value="fd107" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Icecream Cake
+	                        	<input type="checkbox" name="redessert[]" value="fd108" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Walnut Halwa
+	                        	<input type="checkbox" name="redessert[]" value="fd109" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Chocolate Brownie
+	                        	<input type="checkbox" name="redessert[]" value="fd110" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Panna Cotta
+	                        	
+	                        	<b>NON-ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="renonalcoholic[]" value="fnab101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Pinacolada
+	                        	<input type="checkbox" name="renonalcoholic[]" value="fnab102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Pineapple-Orange Sherbert Punch
+	                        	<input type="checkbox" name="renonalcoholic[]" value="fnab103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Margarita Mocktail
+	                        	<input type="checkbox" name="renonalcoholic[]" value="fnab104" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Mint-Lime Iced Tea
+	                        	<input type="checkbox" name="renonalcoholic[]" value="fnab105" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Watermelon Margarita
+	                        	
+	                        	<b>ALCOHOLIC BEVERAGES :</b> 
+	                        	<input type="checkbox" name="realcoholic[]" value="fab101" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Champagne
+	                        	<input type="checkbox" name="realcoholic[]" value="fab102" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Red Wine
+	                        	<input type="checkbox" name="realcoholic[]" value="fab103" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">White Wine
+	                        	<input type="checkbox" name="realcoholic[]" value="fab104" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Scotch
+	                        	<input type="checkbox" name="realcoholic[]" value="fab105" onchange="if(this.checked){readd(this.value);}else{resub(this.value);}">Bourbon
+	
+	<b>ENTERTAINMENT : 
+				        MUSIC :</b> 
+	                        	<input type="checkbox" name="remusic[]" value="em101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Band
+	                        	<input type="checkbox" name="remusic[]" value="em102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">DJ
+	                  
+	                  		<b>DANCE :</b> 
+	                          	<input type="checkbox" name="redance[]" value="ed101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Choreographer
+	                          	<input type="checkbox" name="redance[]" value="ed102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Performers
+	
+	<b>SERVICES :</b>
+	                  		<input type="checkbox" name="reservices[]" value="sc101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Photographer
+	                  		<input type="checkbox" name="reservices[]" value="sc102" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Videographer
+	                  		<input type="checkbox" name="reservices[]" value="sc103" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Stylist and Hair-dresser
+	                  		<input type="checkbox" name="reservices[]" value="sr101" onchange="if(this.checked){add1(this.value);}else{sub1(this.value);}">Bridal Make-up Service
+	</div>
+</div>
+</pre>
+<div style=" padding-left:90 ; padding-top:180 ; height:500 ; background-image:url(34.jpg) ; background-size:100% auto ; background-repeat:no-repeat ; background-position: center center ;">
+<div style=" text-align:center ; padding-top:20 ; padding-bottom:20 ; margin-bottom:50 ; background-color:rgba(255,255,255,0.6) ;width:50% ; border:solid ;" name="startplanning" id="startplanning";>
+	Enter FullName : <input type='text' placeholder='Enter Your Name' name='username' id='username' required>
+	<br>
+	Enter UserName : <input type='text' placeholder='Enter UserName' name='userid' id='userid' onblur="checkuser(this.value)" required>
+	<span id="checkuser" style=" font-size:15 ;"></span>
+	<br>
+	Enter Password : <input type='password' placeholder='Enter Password' name='password' id='password' onkeyup="checkpass(this.value)" required>
+	<span id="checkpass" style=" font-size:15 ;"></span>
+	<br>
+	<input type="submit" value="Confirm Package" name="plan" id="plan" style=' font-family:Zapfino ; color:black ; border:1 solid black ; background-color:rgb(242, 242, 242) ; height:70 ; width:300 ; font-size:20 ;'>
+</div>
+</div>
+</form>
+</font>
+</div>
+</body>
+</html>

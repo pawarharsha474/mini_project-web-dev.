@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>LOGIN</title>
+	<script type ="text/javascript">
+	
+	function validate(userid)
+	{
+		var http = new XMLHttpRequest();
+		http.abort();
+  
+		http.open("GET","loginuser.php?userid=" + userid, true);
+		http.send();
+  
+		http.onreadystatechange= function()
+		{
+			if(http.readyState == 4)
+			{
+				document.getElementById("valid").innerHTML = http.responseText;
+			}
+		}
+	
+	}
+	
+	</script>
+</head>
+<body style=" background-image:url(21.jpg) ; background-size:100% 100% ; background-repeat:no-repeat ; background-position: center center ;">
+	<div style=" margin-top:20 ; height:300 ; width:100% ; background-color:rgba(255,255,255,0.5) ;">
+	<a href="homepage.html"><img style=" margin-left:34% ; margin-right:35% ;" src="logo.png" height="300" width="400"></a><!--logo div-->
+	</div>
+	<div id="main" style=" padding-bottom:10 ; width:50% ; background-color:rgba(255,255,255,0.8) ; margin-top:100 ; margin-left:25% ; margin-right:25% ;">
+		<font style=" font-family:Zapfino ;">
+		<form action='loginpass.php'style=" text-align:center ; font-size:25 ;">
+			UserName : <input type="text" placeholder='Enter UserName' name="userid" id="userid" onblur="validate(this.value)" required><br>
+			<div id="valid" style=" font-size:15 ;"></div>
+			Password : <input type="password" placeholder='Enter Password' name="password" id="password"  required><br>
+			<input type="submit" name="login" id="login" value="LOGIN" style=' font-family:Zapfino ; color:white ; border:1px solid black ; background-color:rgb(102, 0, 102) ; height:50 ; width:150 ; font-size:15 ;'>
+		</form>
+		</font>
+	</div>
+</body>
+</html>
